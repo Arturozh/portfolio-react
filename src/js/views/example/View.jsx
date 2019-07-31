@@ -13,6 +13,7 @@ import { ErrorBoundary } from '../../common/components/Utilities';
 
 // This is lazy loading example
 const LazyExample = LazyLoading(() => import('../../common/components/Example/Example'));
+const LazyExample2 = LazyLoading(() => import('../../common/components/TabsExample/TabsExample'));
 
 class ExampleView extends Component {
   static propTypes = {
@@ -39,7 +40,8 @@ class ExampleView extends Component {
 
     return (
       <Fragment>
-        <LazyExample {...this.props} />
+        {/* <LazyExample {...this.props} /> */}
+        <LazyExample2 {...this.props} />
         <h2>This framework supports i18n and i10n out of the box.</h2>
         <p>
           <FormattedMessage
